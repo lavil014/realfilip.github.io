@@ -1,74 +1,101 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
+/*General styles*/
+
+*{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.title {
-    height: 5rem;
-    display: grid;
-    grid-template-columns: 14fr 1fr 1fr;
-    align-content: center;
+body{
+  font-family:"Noto Sans", system-ui;
+  padding-top: 2rem;
 }
 
-.title a {
-    color: black;
-    text-decoration: none;
+hr{
+  border:solid rgb(177, 170, 170) 0.01rem;
 }
 
-.title h1 {
-    font-size: 2.5rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    letter-spacing: 0.2rem;
-    margin-left: 34rem;
+/*Nav section */
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
-.user-icon {
-    width: 2rem;
+a{
+  text-decoration: none;
+  color: rgb(28, 28, 28);
 }
 
-.user-icon:hover {
-    cursor: pointer;
-    width: 2.1rem;
-    transition: 50ms;
+span{
+  font-size: 1.7em;
+  font-weight: 800;
+  color: black;
 }
 
-.promotion {
-    background-color: black;
-    color: white;
-    height: 2.2rem;
-    font-size: 1.3rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    align-content: center;
+ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.slide:hover {
-    cursor: pointer;
-    text-decoration: underline;
+i{
+  font-size: 1.5rem;
+  color: rgb(89, 85, 85);
 }
 
-main {
-    height: 36rem;
-    background-image: url("C:/Users/filko/Desktop/web_dev/projects/personal/lace up/resources/all-laces.png");
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
-#shop {
-    width: 14rem;
-    height: 4rem;
-    font-size: 2.2rem;
-    font-weight: 700;
-    background-color: white;
-    border: 0.2rem solid black;
-    border-radius: 0.5rem;
+.header{
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#shop:hover {
-    cursor: pointer;
-    border: 0.25rem solid black;
-    transition: 0.1s;
-    border-radius: 0.4rem;
-    font-size: 2.23rem;
+/*Discount section */
+
+.promotion-banner{
+  width: 50rem;
+  height: 15rem;
+  background-image: url(/Images/all-laces.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+}
+
+/*Product section*/
+
+.products{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.products div{
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  width: 10rem;
+  height: 10rem;
+  align-items: center;
+  justify-content: center;
 }
