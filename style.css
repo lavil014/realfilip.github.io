@@ -93,15 +93,6 @@ main{
   cursor: pointer;
 }
 
-.show-products{
-  position: absolute;
-}
-
-.hide-products{
-  position: relative;
-  visibility: hidden;
-}
-
 .products{
   display: grid;
   grid-template-columns: repeat(4, 1fr);

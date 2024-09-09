@@ -1,17 +1,15 @@
-const showBtn = document.getElementById('show-btn')
-const hideBtn = document.getElementById('hide-btn');
+const showBtn = document.getElementById('show-btn');
 const productSection = document.getElementById('product-section')
 
 const showProductSection = ()=>{
-  productSection.style.display = 'grid';
-  hideBtn.style.visibility = 'visible';
-}
+  if( productSection.style.display === 'none'){
+    productSection.style.display = 'grid';
+    showBtn.innerText = 'Less products'
+  }else {
+    productSection.style.display = 'none';
+    showBtn.innerText = 'More products'
+  }
+};
 
-const hideProductSection = ()=>{
-  productSection.style.display = 'none';
-  hideBtn.style.visibility = 'hidden';
-}
 
-showBtn.addEventListener('click',showProductSection);
-
-hideBtn.addEventListener('click', hideProductSection);
+showBtn.addEventListener('click', showProductSection);
